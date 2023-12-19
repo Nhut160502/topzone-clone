@@ -124,3 +124,24 @@ i[class^='cartnew-'] {
   vertical-align: middle;
   background-size: 624px 758px;
 }
+
+.cartnew-search {
+  background-position: -184px -7px;
+  width: 18px;
+  height: 18px;
+  margin: 16px;
+}
+.ytbclick {
+  background-image: url(https://www.topzone.vn/images/topnews/desktop/fi_play-circle.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 90px;
+  width: 90px;
+  line-height: 40px;
+  vertical-align: middle;
+  background-size: 100% 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

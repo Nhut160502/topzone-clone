@@ -1,5 +1,6 @@
 import Default from './customer/layouts/Default'
 import { Cart, Category, Home, Product } from './customer/pages'
+import Tekzone from './customer/pages/Tekzone'
 
 export const publicRouters = [
   {
@@ -20,6 +21,11 @@ export const publicRouters = [
   {
     path: '/cart',
     element: Cart,
+    layout: Default,
+  },
+  {
+    path: '/tekzone',
+    element: Tekzone,
     layout: Default,
   },
 ]

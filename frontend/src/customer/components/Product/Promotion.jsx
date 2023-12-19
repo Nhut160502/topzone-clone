@@ -1,9 +1,9 @@
 import React from 'react'
-import { PromotionWrapper } from 'src/customer/style'
+import { Promotion as Wrapper } from 'src/customer/style/ProductPage'
 
 const Promotion = () => {
   return (
-    <PromotionWrapper>
+    <Wrapper>
       <span>Khuyến mãi</span>
       <small>Giá và khuyến mãi dự kiến áp dụng đến 23:00 | 31/12</small>
       <div className="promotion-content">
@@ -48,7 +48,7 @@ const Promotion = () => {
           </a>
         </p>
       </div>
-    </PromotionWrapper>
+    </Wrapper>
   )
 }
 

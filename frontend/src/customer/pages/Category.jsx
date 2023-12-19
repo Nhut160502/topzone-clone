@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Filter from '../components/Filter'
 import { Col, Row } from 'react-bootstrap'
 import Product from '../components/Product'
-import { CategoryWrapper } from '../style'
+import { Sort, Wrapper } from '../style/Category'
 
 const dataSlider = [
   {
@@ -53,7 +53,7 @@ const Category = () => {
     }
   }, [])
   return (
-    <CategoryWrapper>
+    <Wrapper>
       <div className="title">
         <img
           src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Category/42/WiPhone-120x35.png"
@@ -68,7 +68,7 @@ const Category = () => {
         ))}
       </Slider>
       <Filter />
-      <div className="sort">
+      <Sort>
         <div className="sort-container">
           <div className="sort-title" onClick={handleOpenSort}>
             <span>Xếp theo: </span>
@@ -88,7 +88,7 @@ const Category = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </Sort>
       <Row>
         {data?.map((item) => (
           <Col key={item} lg={'4'}>
@@ -96,7 +96,7 @@ const Category = () => {
           </Col>
         ))}
       </Row>
-    </CategoryWrapper>
+    </Wrapper>
   )
 }
 

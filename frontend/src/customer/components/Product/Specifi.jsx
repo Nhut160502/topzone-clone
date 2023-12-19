@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { SpecifiWrapper } from 'src/customer/style'
+import { Specifi as Wrapper } from 'src/customer/style/ProductPage'
 
 const data = [
   {
@@ -176,7 +176,7 @@ const Specifi = () => {
     }
   }
   return (
-    <SpecifiWrapper>
+    <Wrapper>
       {data.map((item) => (
         <div
           key={item.id}
@@ -195,7 +195,7 @@ const Specifi = () => {
           </ul>
         </div>
       ))}
-    </SpecifiWrapper>
+    </Wrapper>
   )
 }
 

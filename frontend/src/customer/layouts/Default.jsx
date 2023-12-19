@@ -5,6 +5,7 @@ import { PropTypes } from 'prop-types'
 
 const Default = (props) => {
   const { children } = props
+
   return (
     <Wrapper>
       <AppHeader />

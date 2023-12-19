@@ -1,9 +1,9 @@
 import React from 'react'
-import { LoyaltyWrapper } from 'src/customer/style'
+import { Loyalty as Wrapper } from 'src/customer/style/ProductPage'
 
 const Loyalty = () => {
   return (
-    <LoyaltyWrapper>
+    <Wrapper>
       <div className="qr-download">
         <img
           alt=""
@@ -50,7 +50,7 @@ const Loyalty = () => {
           />
         </a>
       </div>
-    </LoyaltyWrapper>
+    </Wrapper>
   )
 }
 

@@ -1,9 +1,9 @@
 import React from 'react'
-import { ReviewsWrapper } from 'src/customer/style'
+import { styled } from 'styled-components'
 
 const Reviews = () => {
   return (
-    <ReviewsWrapper>
+    <Wrapper>
       <div className="text-review ">
         {/* <a
       href="javascript:;"
@@ -1387,7 +1387,11 @@ const Reviews = () => {
           Apple: Apple.com)
         </p>
       </div>
-    </ReviewsWrapper>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.div`
+  display: block;
+`
 export default Reviews

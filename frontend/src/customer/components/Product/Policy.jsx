@@ -1,6 +1,6 @@
 import React from 'react'
-import { PolicyWrapper } from 'src/customer/style'
 import { IconBaoHang, IconBoxtskt, IconDoiTra, IconGiaoHang, IconTongDai } from '../Icon'
+import { Policy as Wrapper } from 'src/customer/style/ProductPage'
 const data = [
   {
     icon: <IconBoxtskt />,
@@ -42,7 +42,7 @@ const data = [
 
 const Policy = () => {
   return (
-    <PolicyWrapper>
+    <Wrapper>
       <ul>
         {data.map((item, idx) => (
           <li key={idx}>
@@ -51,7 +51,7 @@ const Policy = () => {
           </li>
         ))}
       </ul>
-    </PolicyWrapper>
+    </Wrapper>
   )
 }
 

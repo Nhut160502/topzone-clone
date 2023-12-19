@@ -1,29 +1,29 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
-import { NewsWrapper } from '../style'
 import { Link } from 'react-router-dom'
+import { Wrapper } from '../style/News'
+import { getTime } from '../handler/countdown'
 
 const News = (props) => {
   const { data } = props
-  console.log(data)
+  const time = getTime(data.time)
   return (
-    <NewsWrapper>
+    <Wrapper>
       <Link>
         <div className="image">
-          <img src={data?.img} alt="" />
+          <img src={data.url} alt="" />
         </div>
-        <div className="title">
-          <h3>{data?.title}</h3>
-        </div>
-        <div className="created">
-          <span>{data?.createdAt}</span>
+        <div className="infor">
+          <h3>{data.title}</h3>
+          <span>{time}</span>
         </div>
       </Link>
-    </NewsWrapper>
+    </Wrapper>
   )
 }
 
 News.propTypes = {
   data: PropTypes.object,
 }
+
 export default News

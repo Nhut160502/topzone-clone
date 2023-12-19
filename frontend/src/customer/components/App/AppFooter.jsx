@@ -1,7 +1,8 @@
 import React from 'react'
+import { Wrapper } from 'src/customer/style/App/AppFooter'
 
 const AppFooter = () => {
-  return <div>AppFooter</div>
+  return <Wrapper></Wrapper>
 }
 
 export default AppFooter

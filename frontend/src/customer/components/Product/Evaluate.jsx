@@ -1,16 +1,16 @@
 import React from 'react'
-import { EvaluateWrapper } from 'src/customer/style'
 import { IconCmtAllStar } from '../Icon'
-import RateList from '../RateList'
-import Comment from '../Comment'
-import Rating from '../Rating'
+import RateList from './RateList'
+import Comment from './Comment'
+import Rating from './Rating'
 import { useDispatch } from 'react-redux'
 import { activeRate } from 'src/customer/providers/rateSlice'
+import { Evaluete as Wrapper } from 'src/customer/style/ProductPage'
 
 const Evaluate = () => {
   const dispatch = useDispatch()
   return (
-    <EvaluateWrapper>
+    <Wrapper>
       <h2 className="title">Đánh giá iPhone 15 Pro Max</h2>
       <div className="box-content">
         <div className="box-start">
@@ -34,7 +34,7 @@ const Evaluate = () => {
       <div className="btn-rating">
         <button onClick={() => dispatch(activeRate())}>Viết đánh giá</button>
       </div>
-    </EvaluateWrapper>
+    </Wrapper>
   )
 }
 

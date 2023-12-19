@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Slider from 'react-slick'
 import Product from '../Product'
-import { NeedBuyWrapper } from 'src/customer/style'
+import { Needbuy as Wrapper } from 'src/customer/style/ProductPage'
 
 const settings = {
   focusOnSelect: true,
@@ -16,7 +16,7 @@ const settings = {
 const NeedBuy = () => {
   const [show, setShow] = useState(false)
   return (
-    <NeedBuyWrapper>
+    <Wrapper>
       <div className="title">
         <strong className="sg-access">Phụ kiện nên có cho iPhone 15 Pro Max</strong>
         <div>
@@ -39,7 +39,7 @@ const NeedBuy = () => {
         <Product />
         <Product />
       </Slider>
-    </NeedBuyWrapper>
+    </Wrapper>
   )
 }
 

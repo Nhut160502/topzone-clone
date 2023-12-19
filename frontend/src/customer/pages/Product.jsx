@@ -1,18 +1,17 @@
 import React, { useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
-import { styled } from 'styled-components'
 import Slider from 'react-slick'
 
-import Promotion from '../components/Product/Promotion'
 import Policy from '../components/Product/Policy'
 import Loyalty from '../components/Product/Loyalty'
 import NeedBuy from '../components/Product/NeedBuy'
 import Combo from '../components/Product/Combo'
-import { CapacityWrapper, ColorsWrapper, WrapperProduct } from '../style'
 import Evaluate from '../components/Product/Evaluate'
 import Specifi from '../components/Product/Specifi'
 import Reviews from '../components/Product/Reviews'
 import Desc from '../components/Product/Desc'
+import { ButtonSubmit, Capacity, Colors, Content, Description, Wrapper } from '../style/ProductPage'
+import Promotion from '../components/Product/Promotion'
 
 const media = [
   {
@@ -129,8 +128,8 @@ const Product = () => {
   const [activeTabs, setActiveTabs] = useState('1')
 
   return (
-    <WrapperProduct>
-      <div className="product-detail">
+    <Wrapper>
+      <Content>
         <Row>
           <Col lg="6" className="sticky">
             <div className="product-detail-img-main">
@@ -166,9 +165,9 @@ const Product = () => {
             <strong className="product-price">
               33.090.000₫ * <strike>34.190.000₫</strike>
             </strong>
-            <CapacityWrapper>
+            <Capacity>
               <span>Dung lượng</span>
-              <ul className="product-capacity">
+              <ul>
                 {sizeData.map((item) => (
                   <li
                     key={item.id}
@@ -179,10 +178,10 @@ const Product = () => {
                   </li>
                 ))}
               </ul>
-            </CapacityWrapper>
-            <ColorsWrapper>
+            </Capacity>
+            <Colors>
               <span>Màu: </span>
-              <ul className="product-color">
+              <ul>
                 {media.map((item) => (
                   <li
                     key={item.color.id}
@@ -193,9 +192,9 @@ const Product = () => {
                   </li>
                 ))}
               </ul>
-            </ColorsWrapper>
+            </Colors>
             <Promotion />
-            <BtnSubmit>
+            <ButtonSubmit>
               <button className="btn-buy">Mua ngay</button>
               <div className="btn-inst">
                 <button className="btn-inst-company">
@@ -207,13 +206,13 @@ const Product = () => {
                   <span>Visa, Mastercard, JCB, Amex</span>
                 </button>
               </div>
-            </BtnSubmit>
+            </ButtonSubmit>
             <Policy />
             <Loyalty />
           </Col>
         </Row>
-      </div>
-      <div className="description">
+      </Content>
+      <Description>
         <div className="description-container">
           <NeedBuy />
           <Combo />
@@ -230,13 +229,9 @@ const Product = () => {
           </div>
           <Evaluate />
         </div>
-      </div>
-    </WrapperProduct>
+      </Description>
+    </Wrapper>
   )
 }
-
-const BtnSubmit = styled.div`
-  padding-bottom: 10px;
-`
 
 export default Product

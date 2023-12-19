@@ -55,3 +55,11 @@ export const IconCartEmpty = () => {
 export const IconCheckBox = () => {
   return <i className="cartnew-choose"></i>
 }
+
+export const IconCartSearch = () => {
+  return <i className="cartnew-search"></i>
+}
+
+export const IconVideo = () => {
+  return <i className="icon-ytb-big ytbclick"></i>
+}

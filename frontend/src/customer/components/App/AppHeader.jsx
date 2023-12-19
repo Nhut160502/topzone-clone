@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { IconHeaderCart, IconHeaderSearch, IconLogo } from '../Icon'
-import { AppHeaderWrapper } from 'src/customer/style'
+import { Wrapper } from 'src/customer/style/App/AppHeader'
 
 const categories = ['iPhone', 'Mac', 'iPad', 'Watch', 'Âm Thanh', 'Phụ kiện', 'TekZone', 'TopCare']
 
 const AppHeader = () => {
   return (
-    <AppHeaderWrapper>
+    <Wrapper>
       <div className="container">
         <div className="header-left">
           <div className="logo">
@@ -21,7 +21,7 @@ const AppHeader = () => {
           <ul>
             {categories.map((item, idx) => (
               <li key={idx}>
-                <Link to="/c/iphone">{item}</Link>
+                <Link to="/c/tekzone">{item}</Link>
               </li>
             ))}
           </ul>
@@ -37,7 +37,7 @@ const AppHeader = () => {
           </div>
         </div>
       </div>
-    </AppHeaderWrapper>
+    </Wrapper>
   )
 }
 

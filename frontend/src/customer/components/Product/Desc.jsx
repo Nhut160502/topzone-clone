@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import AnimateHeight from 'react-animate-height'
-import { DescImageWrapper } from 'src/customer/style'
+import { DescImage } from 'src/customer/style/ProductPage'
 
 const data = [
   'https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-210923-113413.jpg',
@@ -13,7 +13,7 @@ const Desc = () => {
   const [showDescImage, setShowDescImage] = useState(false)
 
   return (
-    <DescImageWrapper>
+    <DescImage>
       <AnimateHeight height={showDescImage ? 'auto' : 300} easing="auto">
         {data.map((item, idx) => (
           <img key={idx} src={item} alt="" />
@@ -27,7 +27,7 @@ const Desc = () => {
           </div>
         </>
       )}
-    </DescImageWrapper>
+    </DescImage>
   )
 }
 

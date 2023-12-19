@@ -1,10 +1,10 @@
 import React from 'react'
-import { CommentWrapper } from '../style'
-import { IconCmtConFirm, IconCmtLike, IconStarBuy } from './Icon'
+import { IconCmtConFirm, IconCmtLike, IconStarBuy } from '../Icon'
+import { Comment as Wrapper } from 'src/customer/style/ProductPage'
 
 const Comment = () => {
   return (
-    <CommentWrapper>
+    <Wrapper>
       <div className="cmt-top">
         <p className="name">Lý Minh Hiếu</p>
         <div className="confirm-buy">
@@ -35,7 +35,7 @@ const Comment = () => {
         </button>
         <span className="cmtd dot-line">Đã dùng khoảng 1 ngày</span>
       </div>
-    </CommentWrapper>
+    </Wrapper>
   )
 }
 

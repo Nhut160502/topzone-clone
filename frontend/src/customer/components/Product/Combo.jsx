@@ -1,7 +1,6 @@
 import React from 'react'
 import Product from '../Product'
-import { ComboWrapper } from 'src/customer/style'
-
+import { Combo as Wrapper } from 'src/customer/style/ProductPage'
 const data = [
   {
     id: '1',
@@ -28,7 +27,7 @@ const data = [
 
 const Combo = () => {
   return (
-    <ComboWrapper>
+    <Wrapper>
       <div className="title">
         <strong>Phụ kiện gợi ý cho iPhone</strong>
       </div>
@@ -70,7 +69,7 @@ const Combo = () => {
           </button>
         </div>
       </div>
-    </ComboWrapper>
+    </Wrapper>
   )
 }
 

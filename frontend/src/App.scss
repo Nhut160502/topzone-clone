@@ -1,6 +1,7 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../node_modules/slick-carousel/slick/slick.css';
 @import '../node_modules/slick-carousel/slick/slick-theme.css';
+@import '../node_modules/tippy.js/dist/tippy.css';
 
 * {
   margin: 0;
@@ -167,6 +168,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+input:checked {
+  accent-color: #000;
+}
+
 .App {
   text-align: center;
 }
@@ -305,114 +310,5 @@ button.slick-arrow.slick-next {
 
   &:hover {
     background-color: #757575;
-  }
-}
-
-.btn-buy {
-  width: 100%;
-  margin-bottom: 10px;
-  font-size: 20px;
-  line-height: 25px;
-  color: #fff;
-  border-radius: 12px;
-  text-align: center;
-  padding: 18px 0;
-  background: #0071e3;
-  font-weight: 700;
-  border: none;
-}
-.btn-inst {
-  display: flex;
-  gap: 1rem;
-  button {
-    color: #101010;
-    background: #fff;
-    font-size: 16px;
-    padding: 10px 0;
-    margin-right: 0;
-    border-radius: 12px;
-    text-align: center;
-    width: 100%;
-    font-weight: 700;
-    line-height: 25px;
-    span {
-      display: block;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1.1;
-    }
-  }
-}
-
-ul.product-color {
-  display: flex;
-  gap: 1rem;
-  li {
-    list-style: none;
-    button {
-      width: 40px;
-      height: 40px;
-      display: block;
-      overflow: hidden;
-      border-radius: 100%;
-      box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.25);
-      background: #123e61;
-      position: relative;
-      border: 1px solid transparent;
-    }
-    &.active {
-      button {
-        border: 2px solid #0071e3;
-      }
-    }
-  }
-}
-
-ul.product-capacity {
-  display: flex;
-  gap: 1rem;
-  li {
-    list-style: none;
-    button {
-      display: block;
-      overflow: hidden;
-      color: #dbdbdb;
-      background: #2f3033;
-      border-radius: 8px;
-      padding: 10px 12px;
-      text-align: center;
-      font-size: 14px;
-      line-height: 21px;
-      border: 1px solid transparent;
-    }
-    &.active {
-      button {
-        background: #1c1c1d;
-        border: 1px solid #535353;
-      }
-    }
-  }
-}
-
-.product-name {
-  display: block;
-  padding: 0 0 20px;
-  color: #fff;
-  font-size: 32px;
-  font-weight: 700;
-  padding-top: 5px;
-  line-height: 1.2;
-}
-.product-price {
-  display: flex;
-  font-size: 26px;
-  color: #fff;
-  padding: 0 0 20px;
-  align-items: center;
-  strike {
-    padding: 0 10px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 23px;
   }
 }

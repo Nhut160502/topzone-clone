@@ -1,17 +1,6 @@
-import React from 'react'
 import { styled } from 'styled-components'
-import { PropTypes } from 'prop-types'
 
-const AppHeaderWrapper = (props) => {
-  const { children } = props
-  return <Wrapper>{children}</Wrapper>
-}
-
-AppHeaderWrapper.propTypes = {
-  children: PropTypes.node,
-}
-
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   height: 60px;
   width: 100%;
   background-color: #000;
@@ -75,4 +64,3 @@ const Wrapper = styled.div`
     }
   }
 `
-export default AppHeaderWrapper
