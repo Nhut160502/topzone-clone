@@ -1,0 +1,32 @@
+.sidebar {
+  background-color: #3e3e3f;
+}
+
+.btn-store {
+  padding: 10px;
+  color: #fff;
+  background-color: #0d6efd;
+  margin-bottom: 20px !important;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.ant-table-wrapper {
+  margin-top: 20px;
+}
+
+#root {
+  .px-3 {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
+}
+.ant-table-cell {
+  img {
+    width: 100px !important;
+  }
+}
+
+.ant-popover-content {
+  max-width: 380px !important;
+}

@@ -1,0 +1,103 @@
+category [
+    {
+        _id: objectId,
+        name: string,
+        thumbnail: string
+    }
+]
+
+subcategory[
+    {
+        _id:objectId,
+        category:category
+        nam:"string"
+    }
+]
+
+color[
+    {
+        _id:objectId,
+        name:string.
+        code:string
+    }
+]
+
+capacity[
+    {
+        _id:objectId,
+        name:string.
+    }
+]
+
+version[
+    {
+        _id:objectId,
+        name:string.
+    }
+]
+
+specific[
+    {
+        _id:objectId,
+        name:string
+    }
+]
+
+product[
+    {
+        _id:objectId,
+
+        category:category
+
+        subcategory:subcategory
+
+        name: string
+
+        isActive: bool
+
+        version:[version]
+
+        capacity:[capacity]
+    }
+]
+
+
+productDetail[
+    {
+        _id:objectId,
+
+        product:product
+
+        attribute:[
+           {
+                version:version,
+                capacity:capacity,
+                color:color,
+                price:number
+                stock:number
+                sold:number
+                sale:number
+                gallery:[string]
+           }
+        ]
+        specifi:[
+            {
+                type: specifi,
+                desc: array
+            }
+        ]
+
+        needbuy[
+            product:product
+        ]
+
+        combo[
+            {
+                version:version,
+                capacity:capacity,
+                product:product
+                sale:number
+            }
+        ]
+    }
+]

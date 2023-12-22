@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { publicRouters } from './routes'
+import { privateRouters, publicRouters } from './routes'
 import { Provider } from 'react-redux'
 import { CustomerStore } from './redux/customerStore'
 function App() {
@@ -19,6 +19,24 @@ function App() {
                 </Provider>
               }
               path={item.path}
+            />
+          )
+        })}
+      </Routes>
+
+      <Routes>
+        {privateRouters.map((item, idx) => {
+          const Page = item.element
+          const Layout = item.layout
+          return (
+            <Route
+              key={idx}
+              path={item?.path}
+              element={
+                <Layout>
+                  <Page />
+                </Layout>
+              }
             />
           )
         })}
