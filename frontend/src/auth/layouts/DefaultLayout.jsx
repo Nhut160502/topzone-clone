@@ -3,10 +3,13 @@ import { AppFooter, AppHeader, AppSidebar } from '../components'
 import { PropTypes } from 'prop-types'
 import '../scss/style.scss'
 import axiosInterceptor from '../utils/interceptors'
+import { useSelector } from 'react-redux'
+import Loading from '../components/Loading'
 axiosInterceptor()
 
 const DefaultLayout = (props) => {
   const { children } = props
+  const loading = useSelector((state) => state?.loading)
 
   return (
     <>
@@ -16,7 +19,9 @@ const DefaultLayout = (props) => {
         style={{ backgroundColor: '#333' }}
       >
         <AppHeader />
-        <div className="body flex-grow-1 px-3">{children}</div>
+        <div className="body flex-grow-1 px-3">
+          {loading?.active === true ? <Loading /> : children}
+        </div>
         <AppFooter />
       </div>
     </>

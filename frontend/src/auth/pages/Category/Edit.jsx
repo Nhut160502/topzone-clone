@@ -28,9 +28,7 @@ const Edit = () => {
     console.log(files)
   }
 
-  useEffect(() => {
-    const fetchDat = async () => {}
-  }, [slug])
+  useEffect(() => {}, [slug])
   return (
     <Form form={form} {...configsForm} onFinish={handleSubmit} onFinishFailed={handleSubmitFailed}>
       <Form.Item label="Tên danh mục" name="name" rules={[{ required: true, message: '' }]}>

@@ -5,8 +5,9 @@ import { DeleteOutlined } from '@ant-design/icons/lib/icons'
 import { deleteCategory, getCategories } from 'src/auth/services'
 import { popConfirm } from 'src/auth/props/popConfirm'
 import { columnsCategory } from 'src/auth/props/column'
-import Placeholder from 'src/auth/components/Placeholder'
-import FadeIn from 'react-fade-in'
+import FadeIn from 'react-fade-in/lib/FadeIn'
+import { useDispatch } from 'react-redux'
+import { activeLoading, disActiveLoading } from 'src/auth/providers/loading'
 
 const List = () => {
   const columns = [
@@ -22,6 +23,7 @@ const List = () => {
     },
   ]
 
+  const dispatch = useDispatch()
   const [data, setData] = useState([])
 
   const confirm = async (id) => {
@@ -37,6 +39,7 @@ const List = () => {
   }
 
   useEffect(() => {
+    dispatch(activeLoading())
     const fetchData = async () => {
       try {
         const res = await getCategories()
@@ -46,18 +49,17 @@ const List = () => {
       }
     }
     fetchData()
-  }, [])
+    dispatch(disActiveLoading())
+  }, [dispatch])
 
   return (
     <>
-      <Placeholder />
-
-      {/* <FadeIn>
+      <FadeIn>
         <Link className="btn-store" to="/dashboard/category/store">
           Thêm danh mục
         </Link>
         <Table dataSource={data} columns={columns} rowKey="_id" />
-      </FadeIn> */}
+      </FadeIn>
     </>
   )
 }

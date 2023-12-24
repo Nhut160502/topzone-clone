@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { privateRouters, publicRouters } from './routes'
 import { Provider } from 'react-redux'
 import { CustomerStore } from './redux/customerStore'
+import { authStore } from './redux/authStore'
 function App() {
   return (
     <BrowserRouter>
@@ -33,9 +34,11 @@ function App() {
               key={idx}
               path={item?.path}
               element={
-                <Layout>
-                  <Page />
-                </Layout>
+                <Provider store={authStore}>
+                  <Layout>
+                    <Page />
+                  </Layout>
+                </Provider>
               }
             />
           )
